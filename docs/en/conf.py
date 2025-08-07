@@ -7,7 +7,8 @@ project = "instant_crud"
 copyright = "2025, Massimo Ghiani"
 author = "Massimo Ghiani"
 release = "0.2.0"
-
+language = 'en'
+html_title = 'instant_crud documentation'
 # -- General configuration ---------------------------------------------------
 
 extensions = [
