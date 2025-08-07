@@ -11,4 +11,4 @@ Instant Crud Documentation
    :maxdepth: 2
    :caption: Italiano
 
-   overview.it.md
+   overview.md
