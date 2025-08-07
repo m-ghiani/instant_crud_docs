@@ -6,11 +6,6 @@
 Instant Crud Documentation
 ==========================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: English
-
-   overview.md
 
 .. toctree::
    :maxdepth: 2
