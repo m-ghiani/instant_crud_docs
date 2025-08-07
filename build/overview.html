@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation &mdash; instant_crud 0.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=938c9ccc"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            instant_crud
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Documentation</a><ul>
+<li><a class="reference internal" href="#introduction-to-the-instant-crud-project">Introduction to the <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> Project</a></li>
+<li><a class="reference internal" href="#key-features-and-core-architectural-principles">Key Features and Core Architectural Principles</a></li>
+<li><a class="reference internal" href="#detailed-project-structure-and-module-breakdown">Detailed Project Structure and Module Breakdown</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">instant_crud</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h1>
+<section id="introduction-to-the-instant-crud-project">
+<h2>Introduction to the <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> Project<a class="headerlink" href="#introduction-to-the-instant-crud-project" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> is a <strong>robust framework or library</strong> meticulously designed with the primary goal of <strong>simplifying and drastically accelerating the development of CRUD (Create, Read, Update, Delete) operations</strong>. Its main focus lies in the <strong>rapid and efficient construction of web APIs</strong>. Thanks to its <strong>highly modular architecture</strong>, <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> provides a <strong>complete and cohesive set of reusable components</strong> covering critical and fundamental functionalities for any modern application, such as <strong>authentication</strong>, <strong>data management</strong>, <strong>endpoint routing</strong>, and <strong>sophisticated centralized error handling</strong>. This modularity not only ensures code reusability but also contributes to a clean and maintainable architecture.</p>
+<p>The core objective of <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> is to <strong>optimize and speed up the CRUD development process</strong>, including the <strong>management of complex relationships, especially many-to-many</strong>. This is achieved through a modular architecture and specific components designed to abstract complexity and automate much of the repetitive work typically associated with such tasks.</p>
+</section>
+<section id="key-features-and-core-architectural-principles">
+<h2>Key Features and Core Architectural Principles<a class="headerlink" href="#key-features-and-core-architectural-principles" title="Link to this heading"></a></h2>
+<p>The main features of <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> are at the heart of its value, offering concrete solutions to common challenges in API development:</p>
+<ul class="simple">
+<li><p><strong>1. Rapid Generation of CRUD APIs</strong><br />
+<code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> is optimized to allow developers to <strong>quickly create fully functional CRUD endpoints with minimal boilerplate code</strong>. This is made possible by strategic components like <code class="docutils literal notranslate"><span class="pre">crud_router.py</span></code> and <code class="docutils literal notranslate"><span class="pre">base_service.py</span></code>, which <strong>significantly reduce the development time</strong> required for implementing standard data management interfaces.</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">crud_router.py</span></code></strong>: A <strong>generic router class</strong> capable of automatically exposing standard CRUD endpoints for any provided data model. Instead of manually writing routes, developers can generate them automatically.</p>
+<ul>
+<li><p><em>Example</em>: Instantiating <code class="docutils literal notranslate"><span class="pre">CRUDRouter(model=User,</span> <span class="pre">service=UserService)</span></code> automatically generates:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/users</span></code> (list all users)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/users/{id}</span></code> (get user by ID)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/users</span></code> (create new user)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/users/{id}</span></code> (update user)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/users/{id}</span></code> (delete user)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">base_service.py</span></code></strong>: A <strong>base service class</strong> encapsulating common business logic operations. These services often interact with <code class="docutils literal notranslate"><span class="pre">BaseRepository</span></code>, abstracting CRUD logic from the routing layer to keep the code clean and modular.</p></li>
+</ul>
+</li>
+<li><p><strong>2. Comprehensive Authentication and Authorization</strong><br />
+<code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> offers <strong>built-in support for modern security paradigms</strong>, ensuring secure access control.</p>
+<ul>
+<li><p><strong>JWT-based Authentication</strong>: Stateless session management using JSON Web Tokens. The <code class="docutils literal notranslate"><span class="pre">jwt_handler.py</span></code> module handles <strong>token creation, encoding, decoding, and validation</strong>.</p></li>
+<li><p><strong>Role-Based Access Control (RBAC)</strong>: Provides <strong>granular user permission management</strong>. The <code class="docutils literal notranslate"><span class="pre">role_checker.py</span></code> module implements the RBAC logic, verifying user permissions.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">instant_crud/auth/</span></code> module includes decorators such as <code class="docutils literal notranslate"><span class="pre">&#64;jwt_required</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;roles_required([&quot;admin&quot;,</span> <span class="pre">&quot;editor&quot;])</span></code> to easily enforce security controls on API endpoints.</p></li>
+</ul>
+</li>
+<li><p><strong>3. Flexible and Abstracted Data Access Layer</strong><br />
+The framework is <strong>database-agnostic</strong>, compatible with different persistence technologies via well-defined repository interfaces:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">base_repository.py</span></code> and <code class="docutils literal notranslate"><span class="pre">repository_interfaces.py</span></code></strong> define the base repository contract.</p></li>
+<li><p>Implementations include:</p>
+<ul>
+<li><p><strong>SQLAlchemy</strong> (PostgreSQL, MySQL, SQLite)</p></li>
+<li><p><strong>DuckDB</strong> for <strong>in-process analytical queries</strong>, ideal for fast data analysis without external DB servers.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>4. Advanced Data Filtering Capabilities</strong><br />
+<code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> supports <strong>complex filtering via a JSON-based query language</strong>, enabling flexible and dynamic data retrieval through the <code class="docutils literal notranslate"><span class="pre">instant_crud/filters/</span></code> module.</p>
+<ul>
+<li><p><em>Example</em>: <code class="docutils literal notranslate"><span class="pre">?filter={&quot;name&quot;:{&quot;$eq&quot;:&quot;Alice&quot;},&quot;age&quot;:{&quot;$gt&quot;:25}}</span></code> is parsed and translated into a valid DB query. Supported operators include <code class="docutils literal notranslate"><span class="pre">$eq</span></code>, <code class="docutils literal notranslate"><span class="pre">$ne</span></code>, <code class="docutils literal notranslate"><span class="pre">$gt</span></code>, <code class="docutils literal notranslate"><span class="pre">$in</span></code>, <code class="docutils literal notranslate"><span class="pre">$contains</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>5. Native Support for Many-to-Many Relationships</strong><br />
+The framework provides <strong>first-class support and helpers</strong> for seamless many-to-many relationship handling:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">many_to_many_decorator.py</span></code></strong>: Automates join table operations.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">many_to_many_router.py</span></code></strong>: Specialized router for <strong>linking/unlinking entities</strong>.</p>
+<ul>
+<li><p><em>Example</em>: <code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/users/{user_id}/roles/{role_id}</span></code> to assign, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> to remove.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">many_to_many_service.py</span></code></strong>: Encapsulates the <strong>business logic</strong> for maintaining data integrity in many-to-many operations.</p></li>
+</ul>
+</li>
+<li><p><strong>6. Centralized and Granular Error Management</strong><br />
+<code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> includes a <strong>robust error handling system</strong> via the <code class="docutils literal notranslate"><span class="pre">instant_crud/errors/</span></code> module:</p>
+<ul>
+<li><p>Categorizes, manages, and propagates application errors consistently.</p></li>
+<li><p><em>Example</em>: <code class="docutils literal notranslate"><span class="pre">RepositoryNotFoundError</span></code> becomes a <code class="docutils literal notranslate"><span class="pre">404</span> <span class="pre">Not</span> <span class="pre">Found</span></code> HTTP response. Error codes (e.g., <code class="docutils literal notranslate"><span class="pre">ERROR_CODE_AUTH_INVALID_CREDENTIALS</span> <span class="pre">=</span> <span class="pre">1001</span></code>) facilitate client-side error handling.</p></li>
+</ul>
+</li>
+<li><p><strong>7. Integrated Pagination</strong><br />
+The <code class="docutils literal notranslate"><span class="pre">instant_crud/response/pagination.py</span></code> module provides utilities and data structures for <strong>efficiently paginating API responses</strong>:</p>
+<ul>
+<li><p>Converts item lists and counts into structured pagination responses.</p></li>
+<li><p><em>Example</em>: Includes <code class="docutils literal notranslate"><span class="pre">items</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, <code class="docutils literal notranslate"><span class="pre">page</span></code>, and <code class="docutils literal notranslate"><span class="pre">page_size</span></code> fields.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="detailed-project-structure-and-module-breakdown">
+<h2>Detailed Project Structure and Module Breakdown<a class="headerlink" href="#detailed-project-structure-and-module-breakdown" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> project follows a <strong>clean, modular structure</strong>, with each module encapsulating specific responsibilities to enhance clarity and maintainability. The full breakdown of modules and their responsibilities is available in the documentation and mirrors the Italian structure previously provided.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>In summary, <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> emerges as a <strong>complete and well-structured framework</strong>, whose modular design and smart use of reusable components are aimed at <strong>drastically optimizing and accelerating the development of CRUD operations</strong>. Not only does it facilitate the creation of standard APIs, but it also provides <strong>robust support for complex relationships (particularly many-to-many)</strong>, <strong>JWT and RBAC-based authentication</strong>, <strong>flexible and database-agnostic data persistence</strong>, and a <strong>centralized and granular error management system</strong>. By abstracting underlying complexities and automating much of the repetitive work, <code class="docutils literal notranslate"><span class="pre">instant_crud</span></code> enables developers to focus on their application’s unique business logic, <strong>significantly reducing development time</strong> and improving code quality.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Massimo Ghiani.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
