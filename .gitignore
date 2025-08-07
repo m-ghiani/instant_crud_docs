@@ -1,0 +1,5 @@
+# Sphinx build artifacts
+build/
+docs/build/
+*.pyc
+__pycache__/

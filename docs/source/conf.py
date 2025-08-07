@@ -27,7 +27,6 @@ exclude_patterns = []
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../src"))
 
 # -- Options for HTML output -------------------------------------------------
 
