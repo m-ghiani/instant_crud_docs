@@ -12,3 +12,9 @@ Instant Crud Documentation
    :caption: Italiano
 
    overview.it.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Inglese
+
+   ../en/overview.en.md
