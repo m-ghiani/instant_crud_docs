@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: instant_crud \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-07 22:33+0200\n"
+"POT-Creation-Date: 2025-08-07 23:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,10 @@ msgstr ""
 
 #: ../../index.rst:9
 msgid "English"
+msgstr ""
+
+#: ../../index.rst:15
+msgid "Italian"
 msgstr ""
 
 #: ../../index.rst:7
