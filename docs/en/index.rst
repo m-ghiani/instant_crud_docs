@@ -12,4 +12,8 @@ Instant Crud Documentation
 
    overview.en.md
 
-* `Versione italiana su Read the Docs <https://instant-crud-documentation.readthedocs.io/it/latest/>`_
+.. toctree::
+   :maxdepth: 2
+   :caption: Italian
+
+   overview.it.md
