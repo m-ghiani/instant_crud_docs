@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Massimo Ghiani
+# This file is distributed under the same license as the instant_crud package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: instant_crud \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-07 22:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../overview.it.md:1
+msgid "Documentazione"
+msgstr ""
+
+#: ../../../../overview.it.md:3
+msgid "Introduzione al Progetto `instant_crud`"
+msgstr ""
+
+#: ../../../../overview.it.md:5
+msgid "`instant_crud` si configura come un **framework o una libreria robusta** meticolosamente concepita con l'obiettivo primario di **semplificare e accelerare drasticamente lo sviluppo delle operazioni CRUD (Create, Read, Update, Delete)**. Il suo focus principale risiede nella **costruzione rapida ed efficiente di API web**. Grazie alla sua **architettura altamente modulare**, `instant_crud` fornisce un **set completo e coeso di componenti riutilizzabili** che coprono funzionalità critiche e fondamentali per qualsiasi applicazione moderna, quali l'**autenticazione**, la **gestione dei dati**, il **routing degli endpoint** e una **gestione degli errori sofisticata e centralizzata**. Questa modularità non solo garantisce la riusabilità del codice ma contribuisce anche a un'architettura pulita e manutenibile."
+msgstr ""
+
+#: ../../../../overview.it.md:7
+msgid "L'obiettivo intrinseco di `instant_crud` è quello di **ottimizzare e accelerare il processo di sviluppo delle operazioni CRUD**, estendendosi anche alla **gestione delle relazioni complesse, in particolare quelle molti-a-molti**. Ciò viene raggiunto attraverso l'adozione di un'architettura modulare e l'impiego di componenti specifici, progettati per astrarre le complessità e automatizzare gran parte del lavoro ripetitivo, tipicamente associato a tali compiti."
+msgstr ""
+
+#: ../../../../overview.it.md:9
+msgid "Caratteristiche Chiave e Principi Architettonici Fondamentali"
+msgstr ""
+
+#: ../../../../overview.it.md:11
+msgid "Le funzionalità principali di `instant_crud` rappresentano il cuore del suo valore, offrendo soluzioni concrete per le sfide comuni nello sviluppo di API:"
+msgstr ""
+
+#: ../../../../overview.it.md:13
+msgid "**1. Generazione Rapida di API CRUD** Il design di `instant_crud` è ottimizzato per consentire agli sviluppatori di **creare rapidamente endpoint CRUD completamente funzionali con un codice boilerplate minimo**. Questo viene reso possibile sfruttando componenti strategici come `crud_router.py` e `base_service.py`. L'introduzione di questi componenti **riduce significativamente il tempo di sviluppo** necessario per implementare le interfacce standard di gestione dei dati, permettendo agli sviluppatori di concentrarsi sulla logica di business specifica piuttosto che sulla ripetitiva implementazione degli endpoint."
+msgstr ""
+
+#: ../../../../overview.it.md:15
+msgid "**`crud_router.py`**: È un componente fondamentale che funge da **classe router generica**. La sua capacità distintiva è quella di essere configurata per **esporre automaticamente endpoint CRUD standard per qualsiasi modello di dati fornito**. Questo significa che, anziché scrivere manualmente rotte per le operazioni di creazione, lettura, aggiornamento ed eliminazione, `crud_router.py` può generarle in modo automatico."
+msgstr ""
+
+#: ../../../../overview.it.md:16
+msgid "*Esempio*: Istanziando `CRUDRouter(model=User, service=UserService)`, si possono generare automaticamente endpoint come:"
+msgstr ""
+
+#: ../../../../overview.it.md:17
+msgid "`GET /users` (per listare tutti gli utenti)"
+msgstr ""
+
+#: ../../../../overview.it.md:18
+msgid "`GET /users/{id}` (per ottenere un utente specifico per ID)"
+msgstr ""
+
+#: ../../../../overview.it.md:19
+msgid "`POST /users` (per creare un nuovo utente)"
+msgstr ""
+
+#: ../../../../overview.it.md:20
+msgid "`PUT /users/{id}` (per aggiornare un utente esistente)"
+msgstr ""
+
+#: ../../../../overview.it.md:21
+msgid "`DELETE /users/{id}` (per eliminare un utente)"
+msgstr ""
+
+#: ../../../../overview.it.md:22
+msgid "**`base_service.py`**: Definisce una **classe base per i servizi** che incapsula le operazioni comuni di logica di business. Questi servizi interagiscono frequentemente con il `BaseRepository`, astraendo la logica CRUD dal livello di routing e contribuendo a mantenere il codice pulito e modulare. Questa astrazione è cruciale per la manutenibilità e la testabilità del codice."
+msgstr ""
+
+#: ../../../../overview.it.md:24
+msgid "**2. Autenticazione e Autorizzazione Comprensive** `instant_crud` fornisce un **supporto integrato e robusto per paradigmi di sicurezza moderni**, assicurando che l'accesso alle risorse sia controllato e sicuro. Le funzionalità di autenticazione e autorizzazione sono la **spina dorsale di tutte le operazioni di sicurezza** all'interno del framework. Questo include:"
+msgstr ""
+
+#: ../../../../overview.it.md:26
+msgid "**Autenticazione basata su JWT (JSON Web Token)**: Un metodo ampiamente adottato per una **gestione sicura e stateless delle sessioni utente**. I JWT sono autonomi e contengono tutte le informazioni necessarie per autenticare un utente, eliminando la necessità di memorizzare lo stato della sessione sul server. Il modulo `jwt_handler.py` è **centrale per queste funzionalità**, gestendo la **creazione, la codifica, la decodifica e la convalida dei token JWT**."
+msgstr ""
+
+#: ../../../../overview.it.md:27
+msgid "**Controllo degli Accessi Basato sui Ruoli (RBAC - Role-Based Access Control)**: Permette una **gestione granulare dei permessi utente**, definendo cosa gli utenti con specifici ruoli sono autorizzati a fare. Il modulo `role_checker.py` **implementa la logica principale per il RBAC**, verificando se un utente possiede le autorizzazioni necessarie per accedere a determinate risorse o eseguire determinate azioni."
+msgstr ""
+
+#: ../../../../overview.it.md:28
+msgid "Il modulo `instant_crud/auth/` e i suoi sottocomponenti sono dedicati a queste funzionalità. Decoratori come `@jwt_required` (per assicurare la presenza di un token JWT valido) e `@roles_required([\"admin\", \"editor\"])` (per limitare l'accesso a specifici ruoli utente) consentono di **applicare facilmente controlli di sicurezza agli endpoint API**."
+msgstr ""
+
+#: ../../../../overview.it.md:30
+msgid "**3. Livello di Accesso ai Dati Flessibile e Astratto** Il framework è stato progettato per essere **agnostico rispetto al database**, una caratteristica fondamentale che garantisce la **compatibilità con diverse tecnologie di persistenza dei dati**. Ciò viene realizzato attraverso **interfacce di repository ben definite**, che astraggono le interazioni dirette con i database sottostanti, permettendo al resto dell'applicazione di non dipendere da un particolare tipo di database. I moduli `base_repository.py` e `repository_interfaces.py` definiscono l'interfaccia comune e i protocolli per i repository, garantendo coerenza tra le diverse implementazioni. `instant_crud` include implementazioni specifiche per:"
+msgstr ""
+
+#: ../../../../overview.it.md:33
+msgid "**SQLAlchemy**: Una delle implementazioni chiave dell'interfaccia del repository è per **SQLAlchemy**. Questo ORM (Object-Relational Mapper) consente un'**interazione robusta e flessibile con una vasta gamma di database relazionali**, tra cui:"
+msgstr ""
+
+#: ../../../../overview.it.md:34
+msgid "**PostgreSQL**"
+msgstr ""
+
+#: ../../../../overview.it.md:35
+msgid "**MySQL**"
+msgstr ""
+
+#: ../../../../overview.it.md:36
+msgid "**SQLite**"
+msgstr ""
+
+#: ../../../../overview.it.md:37
+msgid "L'uso di SQLAlchemy permette agli sviluppatori di lavorare con oggetti Python, che vengono poi mappati a tabelle e record del database, semplificando le operazioni di accesso ai dati."
+msgstr ""
+
+#: ../../../../overview.it.md:38
+msgid "**DuckDB**: È presente anche un'implementazione specifica del repository per **DuckDB**. DuckDB è una scelta eccellente per **query analitiche in-process ad alte prestazioni**, particolarmente adatta per casi d'uso che richiedono analisi veloci su grandi volumi di dati direttamente all'interno dell'applicazione."
+msgstr ""
+
+#: ../../../../overview.it.md:40
+msgid "**4. Capacità Avanzate di Filtro Dati** `instant_crud` incorpora un **potente meccanismo per applicare filtri complessi ai dati**, utilizzando un **linguaggio di query basato su JSON**. Questo approccio consente un **recupero dati estremamente flessibile e dinamico**, basato su vari criteri e condizioni, direttamente attraverso le richieste API. Il modulo `instant_crud/filters/` è interamente dedicato a gestire questa logica complessa, interpretando le query JSON e traducendole in condizioni applicabili alle operazioni di recupero dati."
+msgstr ""
+
+#: ../../../../overview.it.md:42
+msgid "*Esempio Concettuale*: Una query di filtro come `?filter={\"name\":{\"$eq\":\"Alice\"},\"age\":{\"$gt\":25}}` verrebbe parsata per consentire al repository di costruire una query di database appropriata che recuperi utenti con nome \"Alice\" e età superiore a 25 anni. Gli operatori JSON supportati includono `$eq` (uguale), `$ne` (non uguale), `$gt` (maggiore di), `$in` (in un array), `$contains` (contiene)."
+msgstr ""
+
+#: ../../../../overview.it.md:44
+msgid "**5. Supporto Nativamente per Relazioni Molti-a-Molti** Il framework fornisce **meccanismi e helper specifici per la gestione senza interruzioni delle relazioni molti-a-molti**. Questo supporto è integrato direttamente all'interno dei livelli del router e del servizio, e la sua implementazione è tale da **astrarre la complessità sottostante delle tabelle di join**, che sono tradizionalmente necessarie per gestire tali relazioni nei database relazionali."
+msgstr ""
+
+#: ../../../../overview.it.md:46
+msgid "**`many_to_many_decorator.py`**: Situato nella sottodirectory `core/`, questo è un **decoratore specifico che semplifica la gestione delle relazioni molti-a-molti**, automatizzando potenzialmente le operazioni sulle tabelle di join."
+msgstr ""
+
+#: ../../../../overview.it.md:47
+msgid "*Esempio*: Un decoratore che auto-collega i record in una tabella di join quando si creano o si aggiornano entità con associazioni molti-a-molti."
+msgstr ""
+
+#: ../../../../overview.it.md:48
+msgid "**`many_to_many_router.py`**: Un router specializzato per la gestione di **operazioni specifiche delle relazioni molti-a-molti**, spesso utilizzato per **collegare o scollegare entità**."
+msgstr ""
+
+#: ../../../../overview.it.md:49
+msgid "*Esempio*: Per modelli come `User` e `Role`, questo router potrebbe fornire endpoint come `POST /users/{user_id}/roles/{role_id}` per assegnare un ruolo a un utente, o `DELETE /users/{user_id}/roles/{role_id}` per rimuoverlo."
+msgstr ""
+
+#: ../../../../overview.it.md:50
+msgid "**`many_to_many_service.py`**: Gestisce la **logica di business complessa specificamente per le operazioni di relazione molti-a-molti**, assicurando l'integrità e la coerenza dei dati coinvolti in queste associazioni."
+msgstr ""
+
+#: ../../../../overview.it.md:52
+msgid "**6. Gestione Centralizzata e Granulare degli Errori** `instant_crud` è dotato di una **struttura ben definita e robusta per la gestione degli errori**, che consente di **categorizzare, gestire e propagare gli errori dell'applicazione in modo consistente**. Questo approccio centralizzato migliora notevolmente il debugging per gli sviluppatori e l'esperienza utente, fornendo messaggi di errore chiari e strutturati. Il modulo `instant_crud/errors/` è dedicato a questa funzionalità, e include componenti cruciali come `handlers.py`, `codes.py` e varie classi di errore specifiche per diversi contesti applicativi."
+msgstr ""
+
+#: ../../../../overview.it.md:54
+msgid "*Esempio*: Un gestore può convertire un `RepositoryNotFoundError` in una risposta HTTP `404 Not Found`, fornendo un messaggio chiaro al client. I codici di errore, come `ERROR_CODE_AUTH_INVALID_CREDENTIALS = 1001`, facilitano l'identificazione e la gestione lato client."
+msgstr ""
+
+#: ../../../../overview.it.md:56
+msgid "**7. Paginazione Integrata** Per gestire efficacemente il recupero di grandi set di dati, `instant_crud` include la **paginazione integrata** per le risposte delle API. Questa funzionalità consente un **recupero efficiente di grandi volumi di dati**, suddividendoli in blocchi gestibili, e **ottimizza l'utilizzo della larghezza di banda** per i client che consumano le API. Il modulo `instant_crud/response/pagination.py` fornisce le utilità e le strutture dati necessarie per implementare e formattare queste risposte paginate."
+msgstr ""
+
+#: ../../../../overview.it.md:58
+msgid "*Esempio*: Converte una lista di elementi e il loro conteggio totale in un oggetto di risposta paginata che include gli elementi effettivi, il totale, il numero di pagina corrente e la dimensione della pagina."
+msgstr ""
+
+#: ../../../../overview.it.md:60
+msgid "Struttura Dettagliata del Progetto e Suddivisione dei Moduli"
+msgstr ""
+
+#: ../../../../overview.it.md:62
+msgid "Il progetto `instant_crud` è organizzato secondo una **struttura pulita e modulare**, dove ogni modulo incapsula responsabilità specifiche, promuovendo chiarezza e manutenibilità. La seguente sezione descrive in dettaglio ciascun modulo e i suoi componenti principali."
+msgstr ""
+
+#: ../../../../overview.it.md:64
+msgid "**`instant_crud/__init__.py`** Questo file `__init__.py` è un marker che indica a Python che la directory `instant_crud` deve essere considerata un pacchetto Python. È spesso vuoto o contiene importazioni a livello di pacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:67
+msgid "**`instant_crud/auth/` (Autenticazione)** Questo modulo è la **spina dorsale di tutte le funzionalità di autenticazione e autorizzazione** all'interno di `instant_crud`. Offre un supporto integrato per paradigmi di sicurezza moderni come l'autenticazione basata su JWT e il controllo degli accessi basato sui ruoli (RBAC)."
+msgstr ""
+
+#: ../../../../overview.it.md:69
+msgid "**`__init__.py`**: Marca `auth` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:70
+msgid "**`decorators.py`**: Contiene **decoratori Python** che permettono di applicare facilmente controlli di sicurezza agli endpoint API."
+msgstr ""
+
+#: ../../../../overview.it.md:71
+msgid "*Esempio*:"
+msgstr ""
+
+#: ../../../../overview.it.md:72
+msgid "`@jwt_required`: Assicura che un token JWT valido sia presente nella richiesta."
+msgstr ""
+
+#: ../../../../overview.it.md:73
+msgid "`@roles_required([\"admin\", \"editor\"])`: Limita l'accesso all'endpoint solo agli utenti che possiedono i ruoli specificati (es. \"admin\" o \"editor\")."
+msgstr ""
+
+#: ../../../../overview.it.md:74
+msgid "**`dependencies.py`**: Definisce le **dipendenze di FastAPI** per iniettare informazioni sull'utente autenticato (es. l'ID utente o i ruoli) o per eseguire controlli di autenticazione complessi come parte del ciclo di vita della richiesta."
+msgstr ""
+
+#: ../../../../overview.it.md:75
+msgid "*Esempio*: Una dipendenza che estrae l'ID utente corrente da un token JWT e lo rende disponibile alla funzione dell'endpoint, permettendo alla logica di business di operare nel contesto dell'utente autenticato."
+msgstr ""
+
+#: ../../../../overview.it.md:76
+msgid "**`jwt_handler.py`**: È il gestore centrale per tutto ciò che riguarda i **token JWT**. Le sue responsabilità includono la **creazione di nuovi token**, la loro **codifica (firmando il token)**, la **decodifica (leggendo le informazioni dal token)** e la **convalida (verificando la validità e la firma del token)** per garantire una gestione sicura e stateless delle sessioni utente."
+msgstr ""
+
+#: ../../../../overview.it.md:77
+msgid "*Esempio Concettuale*: Funzioni come `create_access_token(user_id, roles)` per generare un token e `verify_token(token)` per validarlo."
+msgstr ""
+
+#: ../../../../overview.it.md:78
+msgid "**`role_checker.py`**: Implementa la **logica principale per il controllo degli accessi basato sui ruoli (RBAC)**. Questo modulo è responsabile di verificare se un utente autenticato possiede le autorizzazioni necessarie o i ruoli richiesti per accedere a una risorsa o eseguire un'azione specifica."
+msgstr ""
+
+#: ../../../../overview.it.md:79
+msgid "*Esempio Concettuale*: Una funzione `check_user_roles(user_roles, required_roles)` che restituisce `True` se l'utente è autorizzato in base ai ruoli forniti."
+msgstr ""
+
+#: ../../../../overview.it.md:80
+msgid "**`utils.py`**: Fornisce **funzioni di utilità generali** che supportano le operazioni di autenticazione, ma che non rientrano nelle responsabilità più specifiche dei moduli sopra menzionati."
+msgstr ""
+
+#: ../../../../overview.it.md:82
+msgid "**`instant_crud/config/` (Configurazione)** Questo modulo è dedicato a contenere tutte le **impostazioni di configurazione dell'applicazione**. È il luogo centralizzato per definire i parametri che possono variare tra diversi ambienti (sviluppo, test, produzione) o che necessitano di essere facilmente modificabili."
+msgstr ""
+
+#: ../../../../overview.it.md:84
+msgid "**`__init__.py`**: Marca `config` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:85
+msgid "**`settings.py`**: Definisce **variabili d'ambiente, stringhe di connessione al database, segreti JWT** e altri parametri configurabili essenziali per il funzionamento dell'applicazione."
+msgstr ""
+
+#: ../../../../overview.it.md:86
+msgid "*Esempio*: `DATABASE_URL`, `JWT_SECRET_KEY`, `API_VERSION`. Queste impostazioni sono tipicamente caricate da variabili d'ambiente per mantenere la flessibilità e la sicurezza."
+msgstr ""
+
+#: ../../../../overview.it.md:88
+msgid "**`instant_crud/core/` (Core e Utilities Trasversali)** Questo modulo contiene **funzionalità core, aspetti trasversali e utilità fondamentali** che sono utilizzate in diverse parti del framework. È un repository per componenti generici e riutilizzabili."
+msgstr ""
+
+#: ../../../../overview.it.md:90
+msgid "**`__init__.py`**: Marca `core` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:91
+msgid "**`decorators.py`**: Contiene **decoratori generici** che possono essere applicati in varie parti del framework, non specifici per l'autenticazione o le relazioni molti-a-molti, ma utili per logiche trasversali (es. logging, caching)."
+msgstr ""
+
+#: ../../../../overview.it.md:92
+msgid "**`factory.py`**: Implementa il **pattern factory** per la creazione di istanze di componenti core. Questo pattern promuove l'**iniezione di dipendenze** e migliora la **testabilità** del codice, disaccoppiando la logica di creazione degli oggetti dalla logica di business."
+msgstr ""
+
+#: ../../../../overview.it.md:93
+msgid "**`many_to_many_decorator.py`**: Un **decoratore specifico per semplificare la gestione delle relazioni molti-a-molti**. La sua funzione è quella di **automatizzare potenzialmente le operazioni sulle tabelle di join**, riducendo il codice boilerplate necessario per mantenere queste relazioni."
+msgstr ""
+
+#: ../../../../overview.it.md:94
+msgid "*Esempio*: Un decoratore che auto-collega i record in una tabella di join quando si creano o si aggiornano entità con associazioni molti-a-molti, gestendo automaticamente l'inserimento o l'eliminazione dei riferimenti nella tabella intermedia."
+msgstr ""
+
+#: ../../../../overview.it.md:95
+msgid "**`strings/`**: Questa è una sottodirectory cruciale che contiene **costanti di stringa e modelli di messaggio** utilizzati in tutta l'applicazione. La centralizzazione di questi messaggi promuove la **coerenza nella messaggistica** e facilita l'**internazionalizzazione** (i18n) dell'applicazione."
+msgstr ""
+
+#: ../../../../overview.it.md:96
+msgid "**`__init__.py`**: Marca `strings` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:97
+msgid "**`auth.py`**: Contiene messaggi specifici per l'autenticazione (es. \"Invalid credentials\" o \"Token expired\")."
+msgstr ""
+
+#: ../../../../overview.it.md:98
+msgid "**`config.py`**: Messaggi relativi alla configurazione."
+msgstr ""
+
+#: ../../../../overview.it.md:99
+msgid "**`core.py`**: Messaggi generici di base."
+msgstr ""
+
+#: ../../../../overview.it.md:100
+msgid "**`filters.py`**: Messaggi legati al filtraggio dei dati (es. \"Invalid filter format\")."
+msgstr ""
+
+#: ../../../../overview.it.md:101
+msgid "**`messages.py`**: Messaggi generici di successo o informativi."
+msgstr ""
+
+#: ../../../../overview.it.md:102
+msgid "**`repositories.py`**: Messaggi specifici del livello repository (es. \"Record not found\")."
+msgstr ""
+
+#: ../../../../overview.it.md:103
+msgid "**`response.py`**: Messaggi relativi alle risposte API."
+msgstr ""
+
+#: ../../../../overview.it.md:104
+msgid "**`routers.py`**: Messaggi a livello di router."
+msgstr ""
+
+#: ../../../../overview.it.md:105
+msgid "**`services.py`**: Messaggi a livello di servizio."
+msgstr ""
+
+#: ../../../../overview.it.md:106
+msgid "**`utils.py`**: Messaggi per funzioni di utilità."
+msgstr ""
+
+#: ../../../../overview.it.md:108
+msgid "**`instant_crud/errors/` (Gestione Errori e Eccezioni)** Questo modulo è interamente dedicato alla **definizione e gestione degli errori e delle eccezioni a livello di applicazione**. `instant_crud` fornisce una **struttura robusta e ben definita** per la **categorizzazione, la gestione e la propagazione coerente degli errori**, il che è fondamentale per migliorare l'esperienza di debugging per gli sviluppatori e per fornire feedback utili agli utenti."
+msgstr ""
+
+#: ../../../../overview.it.md:110
+msgid "**`__init__.py`**: Marca `errors` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:111
+msgid "**`base.py`**: Definisce la **classe base per tutte le eccezioni personalizzate** in `instant_crud`. Questo assicura che tutte le eccezioni specifiche del framework ereditino una base comune, facilitando la gestione generale."
+msgstr ""
+
+#: ../../../../overview.it.md:112
+msgid "**`codes.py`**: Fornisce un'**enumerazione o una mappatura centralizzata dei codici di errore**. Questo permette una facile identificazione e gestione degli errori lato client, consentendo ai client di interpretare e reagire a specifici tipi di errori in modo programmatico."
+msgstr ""
+
+#: ../../../../overview.it.md:113
+msgid "*Esempio*: `ERROR_CODE_AUTH_INVALID_CREDENTIALS = 1001`."
+msgstr ""
+
+#: ../../../../overview.it.md:114
+msgid "**`factory.py`**: Una factory per la **creazione di istanze di errore**, garantendo che gli oggetti errore siano generati in modo consistente e standardizzato in tutta l'applicazione."
+msgstr ""
+
+#: ../../../../overview.it.md:115
+msgid "**`handlers.py`**: Contiene **gestori di eccezioni globali** che intercettano tipi di errore specifici e restituiscono le appropriate risposte HTTP al client. Questo centralizza la logica di conversione degli errori interni in risposte HTTP standardizzate."
+msgstr ""
+
+#: ../../../../overview.it.md:116
+msgid "*Esempio*: Un gestore che converte un `RepositoryNotFoundError` (un errore interno del livello di persistenza) in una risposta HTTP `404 Not Found` per il client, con un messaggio appropriato."
+msgstr ""
+
+#: ../../../../overview.it.md:117
+msgid "**`auth.py`**: Definisce **classi di errore specifiche per i fallimenti di autenticazione e autorizzazione**, come `AuthenticationError` o `InvalidTokenError`. Questo permette una gestione granulare degli errori di sicurezza."
+msgstr ""
+
+#: ../../../../overview.it.md:118
+msgid "**`filter.py`**: Contiene classi di errore relative a **query di filtro non valide o malformate**, che possono verificarsi quando le richieste del client inviano formati di filtro non conformi."
+msgstr ""
+
+#: ../../../../overview.it.md:119
+msgid "**`repository.py`**: Contiene classi di **errore che originano direttamente dal livello di accesso ai dati**. Esempi includono `RecordNotFoundError` (quando un record richiesto non viene trovato nel database) o `DatabaseConnectionError` (problemi di connessione al database)."
+msgstr ""
+
+#: ../../../../overview.it.md:120
+msgid "**`router.py`**: Definisce gli **errori relativi al routing o all'accesso a endpoint non validi**. Questi errori si verificano quando una richiesta non corrisponde a nessuna rotta definita o tenta di accedere a risorse non esistenti a livello di router."
+msgstr ""
+
+#: ../../../../overview.it.md:121
+msgid "**`validation.py`**: Contiene classi di **errore per i fallimenti di convalida dei dati di input**. Ad esempio, `ValidationError` per dati che non soddisfano i requisiti di schema o `MissingRequiredFieldError` per campi obbligatori mancanti."
+msgstr ""
+
+#: ../../../../overview.it.md:123
+msgid "**`instant_crud/filters/` (Filtraggio Dati Avanzato)** Questo modulo è responsabile della gestione della **logica complessa per il filtraggio dei dati**, consentendo query dinamiche e flessibili basate su criteri definiti in formato JSON."
+msgstr ""
+
+#: ../../../../overview.it.md:125
+msgid "**`__init__.py`**: Marca `filters` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:126
+msgid "**`json_manager.py`**: Questo componente **coordina l'applicazione dei filtri** basati su un oggetto filtro JSON che è stato precedentemente parsato. È il punto centrale che orchesta come le condizioni di filtro vengono tradotte e applicate alle query di dati."
+msgstr ""
+
+#: ../../../../overview.it.md:127
+msgid "**`json_operators.py`**: Definisce l'**insieme degli operatori JSON supportati** per il filtraggio. Questi operatori consentono di esprimere condizioni complesse all'interno delle query JSON."
+msgstr ""
+
+#: ../../../../overview.it.md:128
+msgid "*Esempio*: `$eq` (uguale a), `$ne` (diverso da), `$gt` (maggiore di), `$in` (presente in un array), `$contains` (contiene una sottostringa o elemento)."
+msgstr ""
+
+#: ../../../../overview.it.md:129
+msgid "**`json_parser.py`**: Parsa le **query di filtro in entrata**, che possono provenire da parametri URL o dal corpo della richiesta, in un **formato strutturato** che può essere compreso e elaborato dal `json_manager`."
+msgstr ""
+
+#: ../../../../overview.it.md:130
+msgid "*Esempio Concettuale*: Una query URL come `?filter={\"name\":{\"$eq\":\"Alice\"},\"age\":{\"$gt\":25}}` verrebbe parsata in un oggetto Python (es. un dizionario) che il `json_manager` può utilizzare per costruire una query di database appropriata."
+msgstr ""
+
+#: ../../../../overview.it.md:132
+msgid "**`instant_crud/repositories/` (Persistenza Dati)** Questo modulo costituisce il **livello di accesso ai dati** (DAL) dell'applicazione. La sua funzione principale è **astrarre le interazioni dirette con i database sottostanti**, fornendo un'interfaccia unificata e agnostica rispetto al database. Ciò garantisce la **compatibilità con diverse tecnologie di persistenza dei dati** attraverso l'uso di interfacce di repository ben definite."
+msgstr ""
+
+#: ../../../../overview.it.md:134
+msgid "**`__init__.py`**: Marca `repositories` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:135
+msgid "**`base_repository.py`**: Definisce un'**interfaccia comune e implementa metodi CRUD generici** (come `create`, `get_by_id`, `update`, `delete`, `list_all`) che sono **indipendenti dalla specifica tecnologia del database**. Questo modulo fornisce una base solida e riutilizzabile per qualsiasi implementazione di repository."
+msgstr ""
+
+#: ../../../../overview.it.md:136
+msgid "**`repository_interfaces.py`**: Definisce **classi base astratte o protocolli per i repository**, garantendo la **coerenza tra le diverse implementazioni di database**. Questo è cruciale per l'agnosticismo del database e per facilitare l'intercambiabilità delle tecnologie di persistenza."
+msgstr ""
+
+#: ../../../../overview.it.md:137
+msgid "**`sqlalchemy_repository.py`**: Un'**implementazione specifica dell'interfaccia del repository per SQLAlchemy**. Questa implementazione consente un'**interazione robusta e completa con una vasta gamma di database relazionali**, sfruttando le capacità dell'ORM di SQLAlchemy."
+msgstr ""
+
+#: ../../../../overview.it.md:138
+msgid "*Database supportati*: PostgreSQL, MySQL, SQLite."
+msgstr ""
+
+#: ../../../../overview.it.md:139
+msgid "*Esempio*: Nel `sqlalchemy_repository.py`, il metodo `get_by_id(model, item_id)` utilizzerebbe l'ORM di SQLAlchemy per eseguire una query sul database e recuperare il record desiderato."
+msgstr ""
+
+#: ../../../../overview.it.md:140
+msgid "**`duckdb_repository.py`**: Un'**implementazione specifica dell'interfaccia del repository per DuckDB**. DuckDB è particolarmente adatta per **query analitiche in-process ad alte prestazioni**, offrendo una soluzione efficiente per scenari che richiedono analisi dati veloci senza la necessità di un server di database separato."
+msgstr ""
+
+#: ../../../../overview.it.md:141
+msgid "**`repository_factory.py`**: Una factory per l'**istanziamento dell'implementazione corretta del repository**. Questo modulo seleziona e fornisce l'istanza del repository appropriata (es. SQLAlchemy o DuckDB) in base alla configurazione dell'applicazione o alle esigenze specifiche del runtime, promuovendo il disaccoppiamento."
+msgstr ""
+
+#: ../../../../overview.it.md:143
+msgid "**`instant_crud/response/` (Gestione Risposte API)** Questo modulo gestisce la **struttura standardizzata e l'elaborazione delle risposte API** fornite ai client. È fondamentale per presentare i dati in modo consistente e gestibile."
+msgstr ""
+
+#: ../../../../overview.it.md:145
+msgid "**`__init__.py`**: Marca `response` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:146
+msgid "**`pagination.py`**: Fornisce **funzioni di utilità e strutture dati per gestire e formattare le risposte API paginated**. Questo consente al framework di restituire grandi set di dati in blocchi gestibili, migliorando le prestazioni e l'esperienza utente."
+msgstr ""
+
+#: ../../../../overview.it.md:147
+msgid "*Esempio*: Una funzione che converte una lista di elementi e il conteggio totale in un oggetto di risposta paginata, includendo campi come gli `items` attuali, `total` di tutti gli elementi, `page` corrente e `page_size`."
+msgstr ""
+
+#: ../../../../overview.it.md:149
+msgid "**`instant_crud/routers/` (Definizione Endpoint API)** Questo modulo è responsabile della **definizione degli endpoint e delle rotte API** che espongono le funzionalità dell'applicazione ai client esterni."
+msgstr ""
+
+#: ../../../../overview.it.md:151
+msgid "**`__init__.py`**: Marca `routers` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:152
+msgid "**`crud_router.py`**: Una **classe router generica e configurabile** che può essere utilizzata per **esporre automaticamente endpoint CRUD standard** per qualsiasi modello di dati specificato. Questo riduce drasticamente il codice boilerplate necessario per la creazione di API standard."
+msgstr ""
+
+#: ../../../../overview.it.md:153
+msgid "*Esempio Dettagliato*: Istanziando `CRUDRouter(model=User, service=UserService)`, `instant_crud` può generare automaticamente i seguenti endpoint:"
+msgstr ""
+
+#: ../../../../overview.it.md:154
+msgid "`GET /users`: Recupera una lista di tutti gli utenti, con supporto per paginazione e filtri."
+msgstr ""
+
+#: ../../../../overview.it.md:155
+msgid "`GET /users/{id}`: Recupera un singolo utente tramite il suo ID."
+msgstr ""
+
+#: ../../../../overview.it.md:156
+msgid "`POST /users`: Crea un nuovo utente, validando i dati di input."
+msgstr ""
+
+#: ../../../../overview.it.md:157
+msgid "`PUT /users/{id}`: Aggiorna un utente esistente tramite il suo ID."
+msgstr ""
+
+#: ../../../../overview.it.md:158
+msgid "`DELETE /users/{id}`: Elimina un utente tramite il suo ID."
+msgstr ""
+
+#: ../../../../overview.it.md:159
+msgid "**`many_to_many_router.py`**: Un **router specializzato per la gestione di operazioni specifiche delle relazioni molti-a-molti**. Questo router è particolarmente utile per collegare o scollegare entità in relazioni complesse."
+msgstr ""
+
+#: ../../../../overview.it.md:160
+msgid "*Esempio Dettagliato*: Per i modelli `User` e `Role`, questo router potrebbe fornire endpoint come:"
+msgstr ""
+
+#: ../../../../overview.it.md:161
+msgid "`POST /users/{user_id}/roles/{role_id}`: Per assegnare un ruolo specifico a un utente, creando un'associazione nella tabella di join."
+msgstr ""
+
+#: ../../../../overview.it.md:162
+msgid "`DELETE /users/{user_id}/roles/{role_id}`: Per rimuovere un ruolo da un utente, eliminando l'associazione dalla tabella di join."
+msgstr ""
+
+#: ../../../../overview.it.md:164
+msgid "**`instant_crud/services/` (Logica di Business)** Questo modulo contiene la **logica di business centrale dell'applicazione**. I servizi agiscono come intermediari tra i router/controller (che gestiscono le richieste HTTP) e i repository (che gestiscono l'accesso ai dati), orchestrando le operazioni e applicando le regole di business."
+msgstr ""
+
+#: ../../../../overview.it.md:166
+msgid "**`__init__.py`**: Marca `services` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:167
+msgid "**`base_service.py`**: Definisce una **classe base per i servizi** che include operazioni comuni della logica di business. Questi servizi interagiscono frequentemente con il `BaseRepository`, assicurando che le operazioni CRUD di base siano gestite in modo consistente e che la logica di business sia separata dalla presentazione dei dati e dall'accesso al database."
+msgstr ""
+
+#: ../../../../overview.it.md:168
+msgid "**`many_to_many_service.py`**: Gestisce la **logica di business complessa specificamente per le operazioni di relazione molti-a-molti**. Questo servizio assicura l'integrità e la coerenza dei dati quando si manipolano le associazioni molti-a-molti, gestendo le implicazioni delle operazioni di collegamento e scollegamento."
+msgstr ""
+
+#: ../../../../overview.it.md:170
+msgid "**`instant_crud/utils/` (Funzioni di Utilità e Eccezioni Generali)** Questo modulo contiene **funzioni di utilità generiche** che possono essere utilizzate in tutta l'applicazione e classi di eccezione personalizzate non specifiche di un particolare modulo."
+msgstr ""
+
+#: ../../../../overview.it.md:172
+msgid "**`__init__.py`**: Marca `utils` come un sottpacchetto."
+msgstr ""
+
+#: ../../../../overview.it.md:173
+msgid "**`exceptions.py`**: Definisce **classi di eccezione personalizzate di uso generale** che non sono specifiche di un particolare modulo ma sono utilizzate in diverse parti dell'applicazione."
+msgstr ""
+
+#: ../../../../overview.it.md:175
+msgid "Conclusione"
+msgstr ""
+
+#: ../../../../overview.it.md:177
+msgid "In sintesi, `instant_crud` emerge come un **framework completo e ben strutturato**, il cui design modulare e l'uso intelligente di componenti riutilizzabili sono finalizzati a **ottimizzare e accelerare drasticamente lo sviluppo di operazioni CRUD**. Non solo facilita la creazione di API standard, ma offre anche un **supporto robusto per le relazioni complesse (in particolare molti-a-molti)**, l'**autenticazione basata su JWT e RBAC**, una **gestione flessibile della persistenza dei dati (agnostica al database)** e un sistema di **gestione degli errori centralizzato e granulare**. Astrando le complessità sottostanti e automatizzando gran parte del lavoro ripetitivo, `instant_crud` permette agli sviluppatori di concentrarsi sulla logica di business unica delle loro applicazioni, **riducendo significativamente i tempi di sviluppo** e migliorando la qualità del codice."
+msgstr ""

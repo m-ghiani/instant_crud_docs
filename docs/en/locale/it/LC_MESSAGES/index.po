@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: instant_crud \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-07 21:49+0200\n"
+"POT-Creation-Date: 2025-08-07 22:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -27,4 +27,12 @@ msgstr ""
 #: ../../index.rst:7
 msgid "Instant Crud Documentation"
 msgstr ""
+
+#: ../../../it/index.rst:9
+msgid "Italiano"
+msgstr ""
+
+#: ../../../it/index.rst:7
+msgid "Instant Crud Documentation"
+msgstr "Documentazione di Instant Crud"
 
