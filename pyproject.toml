@@ -1,6 +1,6 @@
 [project]
 name = "instant_crud_docs"
-version = "0.1.0"
+version = "0.2.0"
 description = "Documentation for the instant_crud framework"
 authors = [{ name = "Massimo Ghiani" }]
 license = { text = "MIT" }
@@ -9,7 +9,8 @@ requires-python = ">=3.9"
 dependencies = [
   "sphinx>=7.0.0",
   "myst-parser>=2.0.0",
-  "sphinx-rtd-theme>=1.2.0"
+  "sphinx-rtd-theme>=1.2.0",
+  "sphinx-intl>=2.3.2",
 ]
 
 [build-system]

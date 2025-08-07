@@ -9,10 +9,13 @@ author = "Massimo Ghiani"
 release = "0.2.0"
 language = 'en'
 html_title = 'instant_crud documentation'
+locale_dirs = ['locale/'] 
+gettext_compact = False
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    "myst_parser",  # Enables Markdown via MyST
+    "myst_parser", # Enables Markdown via MyST
+    'sphinx_intl',
 ]
 
 # Support both .rst and .md files

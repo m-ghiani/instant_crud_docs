@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: instant_crud_docs
+Version: 0.1.0
+Summary: Documentation for the instant_crud framework
+Author: Massimo Ghiani
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: sphinx>=7.0.0
+Requires-Dist: myst-parser>=2.0.0
+Requires-Dist: sphinx-rtd-theme>=1.2.0
+Requires-Dist: sphinx-intl>=2.3.2
+Dynamic: license-file

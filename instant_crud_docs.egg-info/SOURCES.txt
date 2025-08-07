@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+instant_crud_docs.egg-info/PKG-INFO
+instant_crud_docs.egg-info/SOURCES.txt
+instant_crud_docs.egg-info/dependency_links.txt
+instant_crud_docs.egg-info/requires.txt
+instant_crud_docs.egg-info/top_level.txt
