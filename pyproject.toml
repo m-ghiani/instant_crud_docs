@@ -1,0 +1,17 @@
+[project]
+name = "instant_crud_docs"
+version = "0.1.0"
+description = "Documentation for the instant_crud framework"
+authors = [{ name = "Massimo Ghiani" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+dependencies = [
+  "sphinx>=7.0.0",
+  "myst-parser>=2.0.0",
+  "sphinx-rtd-theme>=1.2.0"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
